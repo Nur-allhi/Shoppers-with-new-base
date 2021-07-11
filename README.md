@@ -1,4 +1,4 @@
-#Shoppers
+# Shoppers
 
 #### A reliable Webshope.
 
@@ -12,4 +12,8 @@ _Newly build with advance technology_
 - Connected with [Commerce-js](https://commercejs.com/).
 - Added product to the database.
 - Fetched data.
-# Shoppers-with-new-base
+
+> Version: 0.2 Changelog
+
+- Cart builded.
+- code changes.
