@@ -17,3 +17,10 @@ _Newly build with advance technology_
 
 - Cart builded.
 - code changes.
+
+> Version: 0.3 Changelog
+
+- Routing added.
+- cart empty function added.
+- cart item quantity function added.
+- Remove from card added.
