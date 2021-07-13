@@ -29,3 +29,8 @@ _Newly build with advance technology_
 
 - Shipping country selection setuped.
 - checkout token access setuped.
+
+> Version: 0.5 Changelog
+
+- Shipping address form builded.
+- Option are working.
