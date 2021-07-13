@@ -24,3 +24,8 @@ _Newly build with advance technology_
 - cart empty function added.
 - cart item quantity function added.
 - Remove from card added.
+
+> Version: 0.4 Changelog
+
+- Shipping country selection setuped.
+- checkout token access setuped.
