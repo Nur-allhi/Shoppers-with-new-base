@@ -1,17 +1,11 @@
+import { Button, Grid, InputLabel, MenuItem, Select, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import {
-  InputLabel,
-  Select,
-  MenuItem,
-  Button,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import { useForm, FormProvider } from "react-hook-form";
-import FormInputFiled from "./CutomTextFiled";
+import { FormProvider, useForm } from "react-hook-form";
+import { Link } from 'react-router-dom';
 import { commerce } from "../../lib/Commerce";
+import FormInputFiled from "./CutomTextFiled";
 
-const AddressForm = ({ checkoutToken }) => {
+const AddressForm = ({ checkoutToken, next }) => {
   const [shippingCountries, SetShippingCountries] = useState([]);
 
   const [shippingCountry, SetShippingCountry] = useState("");
@@ -91,11 +85,11 @@ const AddressForm = ({ checkoutToken }) => {
 
   return (
     <>
-      <Typography varient="h6" gutterBottom>
+      <Typography variant="h6" gutterBottom>
         Shipping Address
       </Typography>
       <FormProvider {...methods}>
-        <form onSubmit="">
+        <form onSubmit={methods.handleSubmit((data) => next({ ...data, shippingCountry, shippingSubDivision, shippingOption }))}>
           <Grid container spacing={3}>
             <FormInputFiled name="firstName" label="First Name" />
             <FormInputFiled name="lastName" label="Last Name" />
@@ -120,10 +114,7 @@ const AddressForm = ({ checkoutToken }) => {
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Subdivision</InputLabel>
               <Select
-                value={shippingSubDivision}
-                fullWidth
-                onChange={(e) => SetShippingSubDivision(e.target.value)}
-              >
+                value={shippingSubDivision} fullWidth onChange={(e) => SetShippingSubDivision(e.target.value)}>
                 {Subdivisons.map((subdivison) => (
                   <MenuItem key={subdivison.id} value={subdivison.id}>
                     {subdivison.label}
@@ -134,20 +125,21 @@ const AddressForm = ({ checkoutToken }) => {
             <Grid item xs={12} sm={6}>
               <InputLabel>Shipping Options</InputLabel>
               <Select
-                value={shippingOption}
-                fullWidth
-                onChange={(e) => SetShippingOption(e.target.value)}
-              >
+                value={shippingOption} fullWidth onChange={(e) => SetShippingOption(e.target.value)} >
                 {options.map((option) => (
-                  <MenuItem key={option.id} value={option.id}>
-                    {option.label}
-                  </MenuItem>
+                  <MenuItem key={option.id} value={option.id}>{option.label}</MenuItem>
                 ))}
               </Select>
             </Grid>
           </Grid>
+          <br />
+          <div style={{ display: "flex", justifyContent: "space-between" }} >
+            <Button component={Link} to='/cart' variant="outlined" >Back to cart</Button>
+            <Button type="submit" variant="contained" color="primary">Next</Button>
+          </div>
         </form>
       </FormProvider>
+      
     </>
   );
 };

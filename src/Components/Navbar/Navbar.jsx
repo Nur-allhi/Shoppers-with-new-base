@@ -1,15 +1,9 @@
-import React from "react";
 import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Badge,
-  MenuItem,
-  Menu,
-  Typography,
+    AppBar, Badge, IconButton, Toolbar, Typography
 } from "@material-ui/core";
-import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart } from "@material-ui/icons";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/nav.png";
 import useStyles from "./styles";
 
@@ -24,7 +18,7 @@ const Navbar = ({ totalItems }) => {
           <Typography
             component={Link}
             to="/"
-            varient="h6"
+            variant="h6"
             className={classes.title}
             color="inherit"
           >

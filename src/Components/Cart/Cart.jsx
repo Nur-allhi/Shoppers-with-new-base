@@ -1,8 +1,8 @@
+import { Button, Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
-import { Container, Typography, Button, Grid } from "@material-ui/core";
-import useStyles from "./styles";
-import CartItem from "./CartItem/CartItem";
 import { Link } from "react-router-dom";
+import CartItem from "./CartItem/CartItem";
+import useStyles from "./styles";
 
 const Cart = ({
   cart,
@@ -14,7 +14,7 @@ const Cart = ({
 
   const EmptyCart = () => {
     return (
-      <Typography varient="subtitle1">
+      <Typography variant="subtitle1">
         You have no item in your cart,.
         <Link to="/" className="classes.link">
           Start adding some
@@ -39,7 +39,7 @@ const Cart = ({
           ))}
         </Grid>
         <div className={classes.cardDetails}>
-          <Typography varient="h4">
+          <Typography variant="h4">
             Subtotal: {cart.subtotal.formatted} BDT
           </Typography>
           <div>

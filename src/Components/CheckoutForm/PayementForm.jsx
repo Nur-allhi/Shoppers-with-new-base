@@ -1,7 +1,11 @@
 import React from "react";
+import Review from "./Review";
 
-const PayementForm = () => {
-  return <div>PayementForm</div>;
+
+const PayementForm = ({checkoutToken}) => {
+  return <>
+  <Review checkoutToken={checkoutToken}/>
+  </>
 };
 
 export default PayementForm;

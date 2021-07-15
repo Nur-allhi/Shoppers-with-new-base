@@ -34,3 +34,8 @@ _Newly build with advance technology_
 
 - Shipping address form builded.
 - Option are working.
+
+> Version: 0.6 Changelog
+
+- Checkout section setuped for payment methods intrigration.
+- Address form complete to build.
