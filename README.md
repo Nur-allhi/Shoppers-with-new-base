@@ -39,3 +39,7 @@ _Newly build with advance technology_
 
 - Checkout section setuped for payment methods intrigration.
 - Address form complete to build.
+
+> Version: 0.7 Changelog
+
+- Stripe payment method added.
