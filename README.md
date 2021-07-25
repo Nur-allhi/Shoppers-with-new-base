@@ -43,3 +43,10 @@ _Newly build with advance technology_
 > Version: 0.7 Changelog
 
 - Stripe payment method added.
+
+---
+
+> Bugs- V: 0.1:
+
+- Payment method strripe is not getting the whole details.
+- Code needs to be Refactor.
